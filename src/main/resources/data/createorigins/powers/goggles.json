@@ -1,0 +1,5 @@
+{
+    "name": "Mechanical Sight",
+    "description": "You can view the goggles overlay without having any equipped.",
+    "type": "createorigins:goggles"
+}
