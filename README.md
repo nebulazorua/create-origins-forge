@@ -6,3 +6,6 @@ Adds 2 new powers and power types: `createorigins:goggles` and `createorigins:gi
 
 Goggles gives you the power of Engineer's Goggles permenantly, even while you aren't wearing goggles. Girlpower gives you Girl Power as long as you have the power.
 Girl Power only works if you have Create: Estrogen installed (though can always be applied)
+
+
+(Also fixes a bug where Fall Immunity wasn't using the is_fall tag, so now Felines can use Estrogen safely)
