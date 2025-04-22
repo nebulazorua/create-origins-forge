@@ -143,6 +143,12 @@ repositories {
         name "Terrarium"
         url "https://maven.terraformersmc.com"
     }
+	 maven {
+        name = "Sappho Company"
+        description = "Critter"
+        url = "https://maven.is-immensely.gay/nightly"
+    }
+
     maven { url = "https://maven.resourcefulbees.com/repository/maven-public/" }
     maven { url = "https://api.modrinth.com/maven" }
 
@@ -155,6 +161,11 @@ repositories {
 }
 
 dependencies {
+	compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
+    implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.1")) {
+        jarJar.ranged(it, "[0.4.1,)")
+    }
+
     // Specify the version of Minecraft to use.
     // Any artifact can be supplied so long as it has a "userdev" classifier artifact and is a compatible patcher artifact.
     // The "userdev" classifier will be requested and setup by ForgeGradle.
@@ -174,10 +185,11 @@ dependencies {
     implementation  fg.deobf("top.theillusivec4.caelus:caelus-forge:3.2.0+1.20.1")
 
     // Estrogen
+	implementation fg.deobf("uwu.serenity.critter:critter-forge:0.1-beta.14")
     runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
     implementation fg.deobf("earth.terrarium.botarium:botarium-forge-${minecraft_version}:${botarium_version}")
-    implementation fg.deobf("com.teamresourceful.resourcefullib:resourcefullib-forge-1.20.1:2.1.25")
+    implementation fg.deobf("com.teamresourceful.resourcefullib:resourcefullib-forge-1.20.1:2.1.29")
     implementation  fg.deobf("maven.modrinth:estrogen:${estrogen_version}")
     // Mixins
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
