@@ -1,3 +1,5 @@
+# Archived since I don't have time or motivation and also you should be using Origins under Connector
+
 # Create: Origins
 
 A port of [Create Origins](https://modrinth.com/mod/create-origins) to Forge + Create: Estrogen support
